@@ -1,0 +1,3 @@
+TicTail Angular Boilerplate (Native)
+
+Repo not maintained...

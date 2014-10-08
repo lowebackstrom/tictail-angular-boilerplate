@@ -1,0 +1,30 @@
+{
+  "name": "tictail-angular-boilerplate-server",
+  "title": "tictail Angular Boilerplate Server",
+  "version": "0.0.1",
+  "author": "Lowe Bäckström <lowebackstrom@gmail.com>",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "bcrypt": "~0.7.7",
+    "body-parser": "~1.0.2",
+    "connect-flash": "~0.1.1",
+    "connect-redis": "~2.0.0",
+    "cookie-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "express-session": "~1.0.2",
+    "lodash-node": "~2.4.1",
+    "logfmt": "~1.1.2",
+    "method-override": "~1.0.0",
+    "mongoose": "~3.8.8",
+    "mongoose": "~3.8.8",
+    "mongoose-text-search": "0.0.2",
+    "morgan": "~1.0.0",
+    "passport": "~0.2.0",
+    "passport-local": "~0.1.6",
+    "passport-local-mongoose": "~0.2.6",
+    "redis": "~0.10.1"
+  }
+}

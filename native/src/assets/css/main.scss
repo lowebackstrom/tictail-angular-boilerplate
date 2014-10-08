@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+/* ==========================================================================
+   main.css - Feedeo - www.feedeo.com
+   ========================================================================== */
+
+
+/**
+ * Project settings
+ */
+@import "settings";
+
+
+/* Compass
+   ========================================================================== */
+
+/**
+ * Browser support settings
+ *
+ * http://compass-style.org/reference/compass/support/
+ *
+ * [1] Usually compass hacks apply to both ie6 & 7.
+ * [2] Support for webkit's original (non-standard) gradient syntax.
+ * [3] Support for opera in experimental css3 properties (-o).
+ * [4] Support for microsoft in experimental css3 properties (-ms).
+ * [5] Hacks to support Firefox 3.6 or earlier.
+ */
+
+$legacy-support-for-ie: false;                      // [1]
+$support-for-original-webkit-gradients: true;       // [2]
+$experimental-support-for-opera: false;             // [3]
+$experimental-support-for-microsoft: false;         // [4]
+$legacy-support-for-mozilla: false;                 // [5]
+
+
+/**
+ * Compass includes
+ */
+
+@import "compass/utilities",
+        "compass/css3";
+
+
+/**
+ * Ionicons
+ */
+$ionicons-font-path: "../fonts";
+
+@import "vendor/ionicons/ionicons-variables",
+        "vendor/ionicons/ionicons-font",
+        "vendor/ionicons/ionicons-animation",
+        "vendor/ionicons/ionicons-icons";
+
+
+/**
+ * AngularJS
+ */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+}
+ng\:form {
+    display: block;
+}
+.ng-animate-block-transitions {
+    -webkit-transition:0s all!important;
+    transition:0s all!important;
+}
+
+
+/* Objects
+   ========================================================================== */
+
+@import "objects/spinner",
+        "objects/wait";
+
+
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 40px 0;
+    margin-top: 40px;
+}

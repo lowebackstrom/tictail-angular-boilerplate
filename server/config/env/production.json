@@ -1,0 +1,6 @@
+{
+    "origins": [""],
+    "mongodb_url": "",
+    "redis_url": "",
+    "redis_session_db": ""
+}

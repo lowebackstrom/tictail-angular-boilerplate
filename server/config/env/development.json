@@ -1,0 +1,6 @@
+{
+    "origins": ["http://localhost:8000", "http://localhost:9000"],
+    "mongodb_url": "mongodb://localhost/tt-boilerplate",
+    "redis_url": "redis://localhost:6379",
+    "redis_session_db": "redis-tt-boilerplate"
+}

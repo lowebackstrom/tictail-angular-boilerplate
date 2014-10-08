@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" ng-controller="AppController">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Awesome Tictail App</title>
+
+        <link rel="stylesheet" href="https://sdk.ttcdn.co/tt-uikit-0.11.0.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+
+
+        <script>
+            function isIframe() {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+            if (!isIframe()) {
+                window.location = '/not_in_iframe.html';
+            }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://sdk.ttcdn.co/tt-uikit-0.11.0.js"></script>
+        <script src="https://sdk.ttcdn.co/tt.0.12.0.js"></script>
+        <script src="https://apis.google.com/js/client.js"></script>
+
+        <!-- build:js /assets/init.js -->
+        <script src="/assets/js/vendor/angular/angular.min.js"></script>
+        <script src="/assets/js/init.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+
+        <div class="app-container ng-cloak" ng-if="!loading && user.store">
+            <header>
+                <h1>
+                    Monkey do
+                </h1>
+            </header>
+
+            <div ui-view></div>
+
+            <div class="footer">
+                <span class="logo"></span>
+            </div>
+        </div>
+
+
+        <div class="Wait Wait--fill" ng-if="loading">
+            <div class="Spinner"></div>
+        </div>
+
+
+        <!-- build:js /assets/app.js -->
+        <script src="/assets/js/vendor/angular-animate/angular-animate.min.js"></script>
+        <script src="/assets/js/vendor/angular-touch/angular-touch.min.js"></script>
+        <script src="/assets/js/vendor/lodash/lodash.min.js"></script>
+        <script src="/assets/js/vendor/restangular/restangular.min.js"></script>
+        <script src="/assets/js/vendor/angular-webstorage/angular-webstorage.js"></script>
+        <script src="/assets/js/vendor/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="/assets/js/vendor/angular-ui-router/angular-ui-router.min.js"></script>
+        <script src="/assets/js/vendor/amcharts/amcharts.js"></script>
+        <script src="/assets/js/vendor/amcharts/serial.js"></script>
+        <script src="/assets/js/vendor/amcharts/themes/light.js"></script>
+        <% scripts.forEach( function ( file ) { %>
+        <script src="<%= file %>"></script><% }); %>
+        <!-- endbuild -->
+    </body>
+</html>

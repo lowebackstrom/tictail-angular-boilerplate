@@ -1,0 +1,89 @@
+.Wait {
+    padding: 40px 0;
+    text-align: center;
+
+    &.ng-enter,
+    &.ng-leave {
+        transition: .5s ease opacity;
+    }
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+}
+
+.Wait__label {
+    margin-top: 10px;
+    color: #999;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+
+.Wait--small {
+    padding: 20px 0;
+
+    .Wait__label {
+        font-size: 14px;
+    }
+}
+.Wait--large {
+    padding: 80px 0;
+
+    .Wait__label {
+        font-size: 24px;
+    }
+}
+
+
+.Wait--fullpage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-wait;
+    padding-top: 25%;
+    padding-bottom: 0;
+    background-color: #f00;
+}
+
+.Wait--fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    z-index: $zindex-wait;
+    background-color: rgba(#fff, .8);
+
+    .Spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -16px;
+        margin-left: -16px;
+
+        &.Spinner--small {
+            margin-top: -11px;
+            margin-left: -11px;
+        }
+    }
+    .Wait__label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 26px;
+    }
+}
